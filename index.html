@@ -44,10 +44,10 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
 </style>
 <div class="wrap">
 <h1>Homes for your family</h1>
-<p class="sub">Updated October 7, 2026 · Prepared by Brandon and Danni</p>
+<p class="sub">Updated October 7, 2026 (evening) · Prepared by Brandon and Danni</p>
 <div class="how">Every home here keeps the kids at <b>Terramar</b> and <b>Mountain Ridge</b>. No pools. Tap a photo to see all the pictures. Tap <b>♡ Save</b> on homes you like, <b>Hide</b> the ones you do not, and tap <b>Request showing</b> when you want to see one in person.</div>
 
-<div class="tabs" role="tablist"><button class="tab on" data-f="all" type="button">All <span id="nAll"></span></button><button class="tab" data-f="fav" type="button">♡ Saved <span id="nFav"></span></button><button class="tab" data-f="hide" type="button">Hidden <span id="nHide"></span></button></div>
+<div class="tabs" role="tablist"><button class="tab on" data-f="all" type="button">All <span id="nAll"></span></button><button class="tab" data-f="bd4" type="button">4+ bedrooms <span id="nBd4"></span></button><button class="tab" data-f="fav" type="button">♡ Saved <span id="nFav"></span></button><button class="tab" data-f="hide" type="button">Hidden <span id="nHide"></span></button></div>
 
 <h2 class="sec">🚌 Bus for both schools</h2>
 <p class="h2sub">6 homes. The kids stay at Terramar and Mountain Ridge and ride the bus.</p>
@@ -75,6 +75,7 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     <div class="addr">6774 W Rowel Rd<span class="city">Peoria, AZ 85383</span></div>
     <div class="stats"><span><b>5</b> bd</span><span><b>3</b> ba</span><span><b>2,556</b> sq ft</span></div>
     <div class="pay">Year 1 payment about <b>$2,692</b> a month</div>
+    <div class="dist" style="color:var(--drive);font-weight:700">Seller is not taking offers until November 10</div>
     <div class="dist">1.0 mi to Terramar · 2.3 mi to Mountain Ridge · K-8: Terramar</div>
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
@@ -319,6 +320,7 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     <div class="addr">26413 N 65th Dr<span class="city">Phoenix, AZ 85083</span></div>
     <div class="stats"><span><b>4</b> bd</span><span><b>2.5</b> ba</span><span><b>2,274</b> sq ft</span></div>
     <div class="pay">Year 1 payment about <b>$2,718</b> a month</div>
+    <div class="dist" style="color:var(--drive);font-weight:700">Seller is not taking offers until November 10</div>
     <div class="dist">1.1 mi to Terramar · 2.3 mi to Mountain Ridge · K-8: Las Brisas</div>
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
@@ -392,11 +394,12 @@ function render(){
     c.classList.toggle('fav',f);
     const fb=c.querySelector('.fav'); fb.textContent=f?'♥ Saved':'♡ Save'; fb.setAttribute('aria-pressed',f);
     const hb=c.querySelector('.hide'); hb.textContent=h?'Unhide':'Hide';
-    const vis= filter==='all'? !h : filter==='fav'? f && !h : h;
+    const bd=parseInt(c.querySelector('.stats b').textContent)||0;
+    const vis= filter==='all'? !h : filter==='fav'? f && !h : filter==='bd4'? bd>=4 && !h : h;
     c.classList.toggle('hidden',!vis);
   });
   document.querySelectorAll('.sec').forEach(h=>{const g=h.nextElementSibling.nextElementSibling; const any=[...g.children].some(c=>!c.classList.contains('hidden')); h.hidden=!any; h.nextElementSibling.hidden=!any; g.hidden=!any;});
-  document.getElementById('nAll').textContent=cards.length-hide.size; document.getElementById('nFav').textContent=[...fav].filter(x=>!hide.has(x)).length; document.getElementById('nHide').textContent=hide.size;
+  document.getElementById('nAll').textContent=cards.length-hide.size; document.getElementById('nFav').textContent=[...fav].filter(x=>!hide.has(x)).length; document.getElementById('nHide').textContent=hide.size; document.getElementById('nBd4').textContent=cards.filter(c=>(parseInt(c.querySelector('.stats b').textContent)||0)>=4 && !hide.has(c.dataset.id)).length;
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.f===filter));
 }
 cards.forEach(c=>{const id=c.dataset.id;
