@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Tuyisenge Home Search</title><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f4f6f8;--card:#ffffff;--fg:#17202a;--muted:#5d6b7a;--line:#dde3ea;--accent:#0f6e73;--accent-fg:#ffffff;--ok:#1f6b3f;--ok-bg:#dff3e5;--drive:#7a4e07;--drive-bg:#fdefcf;--far:#4b5563;--far-bg:#e8ebef;--pick:#0f6e73;--new:#b4232c;--display:"Archivo",system-ui,sans-serif;--body:"Nunito Sans",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111821;--card:#1a232e;--fg:#eef2f6;--muted:#9fb0c0;--line:#2b3744;--accent:#4fc1c7;--accent-fg:#0b1a1b;--ok:#8fe0a8;--ok-bg:#14301d;--drive:#f3cf7a;--drive-bg:#3a2d10;--far:#c3ccd6;--far-bg:#242e3a;--pick:#4fc1c7;--new:#ff8a92;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111821;--card:#1a232e;--fg:#eef2f6;--muted:#9fb0c0;--line:#2b3744;--accent:#4fc1c7;--accent-fg:#0b1a1b;--ok:#8fe0a8;--ok-bg:#14301d;--drive:#f3cf7a;--drive-bg:#3a2d10;--far:#c3ccd6;--far-bg:#242e3a;--pick:#4fc1c7;--new:#ff8a92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.45;margin:0}
+img{max-width:100%}[hidden]{display:none!important}
+.wrap{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:16px 48px}
+h1{font-family:var(--display);font-size:1.6rem;margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 14px;font-size:.95rem}
+.how{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:.95rem}
+.how b{color:var(--accent)}
+.newbar{background:var(--card);border:2px solid var(--new);color:var(--new);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-weight:700}
+.groups{display:grid;gap:8px;margin:6px 0 16px}
+.gbtn{font:inherit;text-align:left;border-radius:14px;padding:12px 14px;border:2px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;display:flex;align-items:center;gap:12px;min-height:56px}
+.gbtn .ic{font-size:1.5rem}
+.gbtn .t{font-family:var(--display);font-weight:700;font-size:1.02rem;line-height:1.2}
+.gbtn .s{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:.85rem}
+.gbtn .n{margin-left:auto;font-family:var(--display);font-weight:800;font-size:1.3rem;font-variant-numeric:tabular-nums}
+.gbtn.g1.on{border-color:var(--ok);background:var(--ok-bg)} .gbtn.g1.on .n{color:var(--ok)}
+.gbtn.g2.on{border-color:var(--drive);background:var(--drive-bg)} .gbtn.g2.on .n{color:var(--drive)}
+.gbtn.g3.on{border-color:var(--far);background:var(--far-bg)} .gbtn.g3.on .n{color:var(--far)}
+.small{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.tab{font:inherit;font-weight:700;font-size:.85rem;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+.tab.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.gdesc{color:var(--muted);font-size:.95rem;margin:0 0 12px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.ban{font-family:var(--display);font-weight:800;font-size:1.05rem;padding:11px 14px;text-align:center;line-height:1.25}
+.ban.ok{background:var(--ok-bg);color:var(--ok)} .ban.drive{background:var(--drive-bg);color:var(--drive)} .ban.far{background:var(--far-bg);color:var(--far)}
+.photo{display:block;position:relative;aspect-ratio:16/10;max-width:100%;background:var(--line)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .more{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:.8rem;padding:4px 9px;border-radius:999px}
+.body{padding:12px 14px 14px;display:grid;gap:7px}
+.row1{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.price{font-family:var(--display);font-size:1.5rem;font-variant-numeric:tabular-nums}
+.new{background:var(--new);color:#fff;font-weight:800;font-size:.8rem;padding:4px 10px;border-radius:999px}
+.addr{font-weight:700;font-size:1.05rem} .addr .city{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
+.stats{display:flex;gap:14px;color:var(--muted);font-size:.95rem} .stats b{color:var(--fg)}
+.dist{font-size:1rem;line-height:1.5;color:var(--muted)} .dist .big{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--fg)}
+.g2 .dist .big{color:var(--drive)} .g3 .dist .big{color:var(--far)} .g1 .dist .big{color:var(--ok)}
+.pay{font-size:.95rem;color:var(--muted)} .pay b{color:var(--accent);font-size:1.05rem}
+.note-line{color:var(--drive);font-weight:700;font-size:.95rem}
+.acts{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.btn{font:inherit;font-weight:700;font-size:.9rem;border-radius:10px;padding:10px 12px;border:1px solid var(--line);background:var(--card);color:var(--fg);text-decoration:none;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.btn.fav{border-color:var(--pick);color:var(--pick)} .card.fav .btn.fav{background:var(--pick);color:var(--accent-fg)}
+.btn.hide{color:var(--muted)}
+.btn.show{flex:1 1 150px;background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.links{font-size:.85rem;color:var(--muted)} .links a{color:var(--accent);font-weight:600}
+.card.fav{box-shadow:0 0 0 3px var(--pick)}
+.empty{color:var(--muted);padding:18px 0}
+.note{color:var(--muted);font-size:.8rem;margin-top:26px;line-height:1.5}
+.btn:focus-visible,.gbtn:focus-visible,.tab:focus-visible{outline:3px solid var(--pick);outline-offset:2px}
+</style></head><body>
+<div class="wrap">
+<h1>Homes for your family</h1>
+<p class="sub">Updated {{DATE}} · 4+ bedrooms · no pool · under {{PRICE}} · about 10 minutes or less from Terramar</p>
+<div class="newbar" id="newbar" hidden></div>
+<div class="how">Pick a group below. <b>Green</b> homes need no driving for school. <b>Yellow</b> homes mean you drive the little ones to Terramar. <b>Grey</b> homes mean you drive everyone. Tap a photo for all the pictures. Tap <b>♡ Save</b> for homes you like, <b>Hide</b> for the ones you do not, and <b>Request showing</b> to message Danni.</div>
+
+<div class="groups" role="tablist">
+  <button class="gbtn g1 on" data-g="1" type="button"><span class="ic">🚌</span><span class="t">Bus to both schools<span class="s">No driving for school</span></span><span class="n" id="n1">{{N1}}</span></button>
+  <button class="gbtn g2" data-g="2" type="button"><span class="ic">🚗</span><span class="t">Bus to Mountain Ridge only<span class="s">You drive to Terramar every day</span></span><span class="n" id="n2">{{N2}}</span></button>
+  <button class="gbtn g3" data-g="3" type="button"><span class="ic">🚗🚗</span><span class="t">Outside both bus zones<span class="s">You drive to both schools</span></span><span class="n" id="n3">{{N3}}</span></button>
+</div>
+<div class="small"><button class="tab" data-f="fav" type="button">♡ Saved <span id="nFav"></span></button><button class="tab" data-f="hide" type="button">Hidden <span id="nHide"></span></button></div>
+
+<section data-sec="1"><p class="gdesc">The kids stay at Terramar and Mountain Ridge and ride the bus (or walk). This is the short list.</p><div class="grid">{{G1}}</div></section>
+<section data-sec="2" hidden><p class="gdesc">The kids keep both schools. The big kids ride the bus to Mountain Ridge. Someone drives the little ones to Terramar every morning and afternoon. The drive is shown big on each home.</p><div class="grid">{{G2}}</div></section>
+<section data-sec="3" hidden><p class="gdesc">No school bus from these homes. Someone drives all the kids to both schools every day. Keeping the kids at Terramar and Mountain Ridge from here would need the district's approval. Look at the drive times first.</p><div class="grid">{{G3}}</div></section>
+<section data-sec="fav" hidden><p class="gdesc">Homes you saved.</p><div class="grid" id="favgrid"></div></section>
+<section data-sec="hide" hidden><p class="gdesc">Homes you hid. Tap Unhide to bring one back.</p><div class="grid" id="hidegrid"></div></section>
+
+<p class="note">Payments are estimates at the asking price using the same setup as your pre-approval: FHA, 3.5% down, 6.875% rate with a seller paid 3-2-1 buydown, showing year 1 at 3.875%. Includes principal, interest, property tax estimate, homeowners insurance and FHA mortgage insurance. HOA dues are not included. Drive times are estimates. Bus eligibility is confirmed with the district before an offer. This page updates every morning.</p>
+</div>
+<script>
+(function(){
+const IDS={{IDS}};
+let st={fav:[],hide:[],seen:[]};
+try{st=Object.assign(st,JSON.parse(localStorage.getItem('homes2')||'{}'))}catch(e){}
+const fav=new Set(st.fav), hide=new Set(st.hide), seen=new Set(st.seen);
+const cards=[...document.querySelectorAll('.card')]; const home={}; cards.forEach(c=>home[c.dataset.id]=c.parentElement);
+let view='1';
+function save(){try{localStorage.setItem('homes2',JSON.stringify({fav:[...fav],hide:[...hide],seen:[...seen]}))}catch(e){}}
+// new since last visit
+const fresh=seen.size? IDS.filter(id=>!seen.has(id)) : [];
+if(fresh.length){const nb=document.getElementById('newbar'); nb.textContent=fresh.length+(fresh.length===1?' new home':' new homes')+' since you last looked. Look for the red New tag.'; nb.hidden=false;
+  cards.forEach(c=>{if(fresh.includes(c.dataset.id)&&!c.querySelector('.new')){const s=document.createElement('span');s.className='new';s.textContent='New';c.querySelector('.row1').appendChild(s)}})}
+IDS.forEach(id=>seen.add(id)); save();
+function render(){
+  cards.forEach(c=>{const id=c.dataset.id,f=fav.has(id),h=hide.has(id);
+    c.classList.toggle('fav',f);
+    const fb=c.querySelector('.fav'); fb.textContent=f?'♥ Saved':'♡ Save'; fb.setAttribute('aria-pressed',f);
+    c.querySelector('.hide').textContent=h?'Unhide':'Hide';
+    // put card in the right grid
+    let target;
+    if(view==='fav') target= f&&!h ? document.getElementById('favgrid') : null;
+    else if(view==='hide') target= h ? document.getElementById('hidegrid') : null;
+    else target= (!h && c.classList.contains('g'+view)) ? home[id] : null;
+    if(target){ if(c.parentElement!==target) target.appendChild(c); c.hidden=false; } else { if(c.parentElement!==home[id]) home[id].appendChild(c); c.hidden=true; }
+  });
+  document.querySelectorAll('section[data-sec]').forEach(s=>s.hidden=s.dataset.sec!==view);
+  document.querySelectorAll('.gbtn').forEach(b=>b.classList.toggle('on',b.dataset.g===view));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.f===view));
+  for(const g of ['1','2','3']) document.getElementById('n'+g).textContent=cards.filter(c=>c.classList.contains('g'+g)&&!hide.has(c.dataset.id)).length;
+  document.getElementById('nFav').textContent=[...fav].filter(x=>!hide.has(x)).length; document.getElementById('nHide').textContent=hide.size;
+}
+cards.forEach(c=>{const id=c.dataset.id;
+  c.querySelector('.fav').addEventListener('click',()=>{fav.has(id)?fav.delete(id):fav.add(id);save();render()});
+  c.querySelector('.hide').addEventListener('click',()=>{hide.has(id)?hide.delete(id):hide.add(id);save();render()});
+});
+document.querySelectorAll('.gbtn').forEach(b=>b.addEventListener('click',()=>{view=b.dataset.g;render();}));
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{view=(view===t.dataset.f)?'1':t.dataset.f;render();}));
+render();
+})();
+</script>
+</body></html>

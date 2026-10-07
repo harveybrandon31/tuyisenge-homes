@@ -1,82 +1,83 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Tuyisenge Home Search</title><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer"><style>body{margin:0;font-family:system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap">
+<html lang="en"><head><meta charset="utf-8"><title>Tuyisenge Home Search</title><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap">
 <style>
-:root{--bg:#f4f6f8;--card:#ffffff;--fg:#17202a;--muted:#5d6b7a;--line:#dde3ea;--accent:#0f6e73;--accent-fg:#ffffff;--ok:#2f7d4f;--ok-bg:#e6f4ea;--drive:#8a5a0b;--drive-bg:#fdf3df;--pick:#0f6e73;--pick-bg:#e3f2f2;--display:"Archivo",system-ui,sans-serif;--body:"Nunito Sans",system-ui,sans-serif}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111821;--card:#1a232e;--fg:#eef2f6;--muted:#9fb0c0;--line:#2b3744;--accent:#4fc1c7;--accent-fg:#0b1a1b;--ok:#7fd49a;--ok-bg:#16301f;--drive:#f0c674;--drive-bg:#3a2d10;--pick:#4fc1c7;--pick-bg:#13303a;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#111821;--card:#1a232e;--fg:#eef2f6;--muted:#9fb0c0;--line:#2b3744;--accent:#4fc1c7;--accent-fg:#0b1a1b;--ok:#7fd49a;--ok-bg:#16301f;--drive:#f0c674;--drive-bg:#3a2d10;--pick:#4fc1c7;--pick-bg:#13303a;color-scheme:dark}
+:root{--bg:#f4f6f8;--card:#ffffff;--fg:#17202a;--muted:#5d6b7a;--line:#dde3ea;--accent:#0f6e73;--accent-fg:#ffffff;--ok:#1f6b3f;--ok-bg:#dff3e5;--drive:#7a4e07;--drive-bg:#fdefcf;--far:#4b5563;--far-bg:#e8ebef;--pick:#0f6e73;--new:#b4232c;--display:"Archivo",system-ui,sans-serif;--body:"Nunito Sans",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111821;--card:#1a232e;--fg:#eef2f6;--muted:#9fb0c0;--line:#2b3744;--accent:#4fc1c7;--accent-fg:#0b1a1b;--ok:#8fe0a8;--ok-bg:#14301d;--drive:#f3cf7a;--drive-bg:#3a2d10;--far:#c3ccd6;--far-bg:#242e3a;--pick:#4fc1c7;--new:#ff8a92;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111821;--card:#1a232e;--fg:#eef2f6;--muted:#9fb0c0;--line:#2b3744;--accent:#4fc1c7;--accent-fg:#0b1a1b;--ok:#8fe0a8;--ok-bg:#14301d;--drive:#f3cf7a;--drive-bg:#3a2d10;--far:#c3ccd6;--far-bg:#242e3a;--pick:#4fc1c7;--new:#ff8a92;color-scheme:dark}
+*{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.45;margin:0}
-.wrap{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:16px 40px}
+img{max-width:100%}[hidden]{display:none!important}
+.wrap{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:16px 48px}
 h1{font-family:var(--display);font-size:1.6rem;margin:0 0 4px;text-wrap:balance}
-.sub{color:var(--muted);margin:0 0 18px;font-size:.95rem}
-.how{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:22px;font-size:.95rem}
+.sub{color:var(--muted);margin:0 0 14px;font-size:.95rem}
+.how{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:.95rem}
 .how b{color:var(--accent)}
-h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
-.h2sub{color:var(--muted);font-size:.92rem;margin:0 0 12px}
-.grid{display:grid;gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:box-shadow .15s}
+.newbar{background:var(--card);border:2px solid var(--new);color:var(--new);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-weight:700}
+.groups{display:grid;gap:8px;margin:6px 0 16px}
+.gbtn{font:inherit;text-align:left;border-radius:14px;padding:12px 14px;border:2px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;display:flex;align-items:center;gap:12px;min-height:56px}
+.gbtn .ic{font-size:1.5rem}
+.gbtn .t{font-family:var(--display);font-weight:700;font-size:1.02rem;line-height:1.2}
+.gbtn .s{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:.85rem}
+.gbtn .n{margin-left:auto;font-family:var(--display);font-weight:800;font-size:1.3rem;font-variant-numeric:tabular-nums}
+.gbtn.g1.on{border-color:var(--ok);background:var(--ok-bg)} .gbtn.g1.on .n{color:var(--ok)}
+.gbtn.g2.on{border-color:var(--drive);background:var(--drive-bg)} .gbtn.g2.on .n{color:var(--drive)}
+.gbtn.g3.on{border-color:var(--far);background:var(--far-bg)} .gbtn.g3.on .n{color:var(--far)}
+.small{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.tab{font:inherit;font-weight:700;font-size:.85rem;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+.tab.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.gdesc{color:var(--muted);font-size:.95rem;margin:0 0 12px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.ban{font-family:var(--display);font-weight:800;font-size:1.05rem;padding:11px 14px;text-align:center;line-height:1.25}
+.ban.ok{background:var(--ok-bg);color:var(--ok)} .ban.drive{background:var(--drive-bg);color:var(--drive)} .ban.far{background:var(--far-bg);color:var(--far)}
 .photo{display:block;position:relative;aspect-ratio:16/10;max-width:100%;background:var(--line)}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
 .photo .more{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:.8rem;padding:4px 9px;border-radius:999px}
-.body{padding:12px 14px 14px;display:grid;gap:6px}
-.row1{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-.price{font-family:var(--display);font-size:1.45rem;font-variant-numeric:tabular-nums}
-.pill{font-size:.78rem;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
-.pill.ok{background:var(--ok-bg);color:var(--ok)} .pill.drive{background:var(--drive-bg);color:var(--drive)}
-.addr{font-weight:700;font-size:1.02rem} .addr .city{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
+.body{padding:12px 14px 14px;display:grid;gap:7px}
+.row1{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.price{font-family:var(--display);font-size:1.5rem;font-variant-numeric:tabular-nums}
+.new{background:var(--new);color:#fff;font-weight:800;font-size:.8rem;padding:4px 10px;border-radius:999px}
+.addr{font-weight:700;font-size:1.05rem} .addr .city{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
 .stats{display:flex;gap:14px;color:var(--muted);font-size:.95rem} .stats b{color:var(--fg)}
-.pay{font-size:.95rem} .pay b{color:var(--accent)}
-.dist{color:var(--muted);font-size:.84rem}
+.dist{font-size:1rem;line-height:1.5;color:var(--muted)} .dist .big{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--fg)}
+.g2 .dist .big{color:var(--drive)} .g3 .dist .big{color:var(--far)} .g1 .dist .big{color:var(--ok)}
+.pay{font-size:.95rem;color:var(--muted)} .pay b{color:var(--accent);font-size:1.05rem}
+.note-line{color:var(--drive);font-weight:700;font-size:.95rem}
 .acts{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
 .btn{font:inherit;font-weight:700;font-size:.9rem;border-radius:10px;padding:10px 12px;border:1px solid var(--line);background:var(--card);color:var(--fg);text-decoration:none;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
-.btn.fav{flex:0 0 auto;border-color:var(--pick);color:var(--pick)} .card.fav .btn.fav{background:var(--pick);color:var(--accent-fg)}
-.btn.hide{flex:0 0 auto;color:var(--muted)}
+.btn.fav{border-color:var(--pick);color:var(--pick)} .card.fav .btn.fav{background:var(--pick);color:var(--accent-fg)}
+.btn.hide{color:var(--muted)}
 .btn.show{flex:1 1 150px;background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
 .links{font-size:.85rem;color:var(--muted)} .links a{color:var(--accent);font-weight:600}
-.card.hidden{display:none} .card.fav{box-shadow:0 0 0 3px var(--pick)}
-.tabs{display:flex;gap:8px;margin:4px 0 6px;flex-wrap:wrap}
-.tab{font:inherit;font-weight:700;font-size:.9rem;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;min-height:40px}
-.tab.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-.tab span{opacity:.7;font-weight:600}
-.btn:focus-visible{outline:3px solid var(--pick);outline-offset:2px}
+.card.fav{box-shadow:0 0 0 3px var(--pick)}
+.empty{color:var(--muted);padding:18px 0}
 .note{color:var(--muted);font-size:.8rem;margin-top:26px;line-height:1.5}
-@media (prefers-reduced-motion: reduce){*{transition:none!important}}
-</style>
+.btn:focus-visible,.gbtn:focus-visible,.tab:focus-visible{outline:3px solid var(--pick);outline-offset:2px}
+</style></head><body>
 <div class="wrap">
 <h1>Homes for your family</h1>
-<p class="sub">Updated October 7, 2026 (evening) · Prepared by Brandon and Danni</p>
-<div class="how">Every home here keeps the kids at <b>Terramar</b> and <b>Mountain Ridge</b>. No pools. Tap a photo to see all the pictures. Tap <b>♡ Save</b> on homes you like, <b>Hide</b> the ones you do not, and tap <b>Request showing</b> when you want to see one in person.</div>
+<p class="sub">Updated October 7, 2026 · 4+ bedrooms · no pool · under $500,000 · about 10 minutes or less from Terramar</p>
+<div class="newbar" id="newbar" hidden></div>
+<div class="how">Pick a group below. <b>Green</b> homes need no driving for school. <b>Yellow</b> homes mean you drive the little ones to Terramar. <b>Grey</b> homes mean you drive everyone. Tap a photo for all the pictures. Tap <b>♡ Save</b> for homes you like, <b>Hide</b> for the ones you do not, and <b>Request showing</b> to message Danni.</div>
 
-<div class="tabs" role="tablist"><button class="tab on" data-f="all" type="button">All <span id="nAll"></span></button><button class="tab" data-f="bd4" type="button">4+ bedrooms <span id="nBd4"></span></button><button class="tab" data-f="fav" type="button">♡ Saved <span id="nFav"></span></button><button class="tab" data-f="hide" type="button">Hidden <span id="nHide"></span></button></div>
+<div class="groups" role="tablist">
+  <button class="gbtn g1 on" data-g="1" type="button"><span class="ic">🚌</span><span class="t">Bus to both schools<span class="s">No driving for school</span></span><span class="n" id="n1">5</span></button>
+  <button class="gbtn g2" data-g="2" type="button"><span class="ic">🚗</span><span class="t">Bus to Mountain Ridge only<span class="s">You drive to Terramar every day</span></span><span class="n" id="n2">3</span></button>
+  <button class="gbtn g3" data-g="3" type="button"><span class="ic">🚗🚗</span><span class="t">Outside both bus zones<span class="s">You drive to both schools</span></span><span class="n" id="n3">10</span></button>
+</div>
+<div class="small"><button class="tab" data-f="fav" type="button">♡ Saved <span id="nFav"></span></button><button class="tab" data-f="hide" type="button">Hidden <span id="nHide"></span></button></div>
 
-<h2 class="sec">🚌 Bus for both schools</h2>
-<p class="h2sub">6 homes. The kids stay at Terramar and Mountain Ridge and ride the bus.</p>
-<div class="grid">
-<article class="card" data-id="6517 W Yellow Bird Ln">
-  <a class="photo" href="https://www.redfin.com/AZ/Phoenix/6517-W-Yellow-Bird-Ln-85083/home/28002414" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/538/genIslnoResize.7029538_G.webp" alt="6517 W Yellow Bird Ln" loading="lazy"><span class="more">See all photos</span></a>
+<section data-sec="1"><p class="gdesc">The kids stay at Terramar and Mountain Ridge and ride the bus (or walk). This is the short list.</p><div class="grid"><article class="card g1" data-id="27142013" data-bd="5">
+  <div class="ban ok">🚌 Bus to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Peoria/6774-W-Rowel-Rd-85383/home/27142013" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/882/genIslnoResize.7064882_0.webp" alt="6774 W Rowel Rd" loading="lazy"><span class="more">See all photos</span></a>
   <div class="body">
-    <div class="row1"><div class="price">$445,900</div><span class="pill ok">🚌 Bus for both schools</span></div>
-    <div class="addr">6517 W Yellow Bird Ln<span class="city">Phoenix, AZ 85083</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2</b> ba</span><span><b>1,537</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,534</b> a month</div>
-    <div class="dist">2.0 mi to Terramar · 3.2 mi to Mountain Ridge · K-8: Terramar</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%206517%20W%20Yellow%20Bird%20Ln%2C%20Phoenix.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/6517-W-Yellow-Bird-Ln-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6517%20W%20Yellow%20Bird%20Ln%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="6774 W Rowel Rd">
-  <a class="photo" href="https://www.redfin.com/AZ/Peoria/6774-W-Rowel-Rd-85383/home/27142013" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/882/genIslnoResize.7064882_3.webp" alt="6774 W Rowel Rd" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$475,000</div><span class="pill ok">🚌 Bus for both schools</span></div>
+    <div class="row1"><div class="price">$475,000</div></div>
     <div class="addr">6774 W Rowel Rd<span class="city">Peoria, AZ 85383</span></div>
     <div class="stats"><span><b>5</b> bd</span><span><b>3</b> ba</span><span><b>2,556</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,692</b> a month</div>
-    <div class="dist" style="color:var(--drive);font-weight:700">Seller is not taking offers until November 10</div>
-    <div class="dist">1.0 mi to Terramar · 2.3 mi to Mountain Ridge · K-8: Terramar</div>
+    <div class="dist"><span class="big">1.0 mi</span> to Terramar · <span class="big">2.3 mi</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,692</b> a month · K-8 zone: Terramar</div>
+    <div class="note-line">Your offer is in. Danni is waiting to hear back from the seller.</div>
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
       <button class="btn hide" type="button">Hide</button>
@@ -85,14 +86,16 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     <div class="links"><a href="https://www.zillow.com/homes/6774-W-Rowel-Rd-Peoria-AZ-85383_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6774%20W%20Rowel%20Rd%2C%20Peoria%2C%20AZ%2085383" target="_blank" rel="noopener">Directions</a></div>
   </div>
 </article>
-<article class="card" data-id="6617 W Molly Ln">
-  <a class="photo" href="https://www.redfin.com/AZ/Phoenix/6617-W-Molly-Ln-85083/home/27859420" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/325/genIslnoResize.6907325_2.webp" alt="6617 W Molly Ln" loading="lazy"><span class="more">See all photos</span></a>
+<article class="card g1" data-id="27859420" data-bd="4">
+  <div class="ban ok">🚌 Bus to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Phoenix/6617-W-Molly-Ln-85083/home/27859420" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/325/genIslnoResize.6907325_0.webp" alt="6617 W Molly Ln" loading="lazy"><span class="more">See all photos</span></a>
   <div class="body">
-    <div class="row1"><div class="price">$485,777</div><span class="pill ok">🚌 Bus for both schools</span></div>
+    <div class="row1"><div class="price">$485,777</div></div>
     <div class="addr">6617 W Molly Ln<span class="city">Phoenix, AZ 85083</span></div>
     <div class="stats"><span><b>4</b> bd</span><span><b>2</b> ba</span><span><b>2,078</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,750</b> a month</div>
-    <div class="dist">1.3 mi to Terramar · 2.5 mi to Mountain Ridge · K-8: Terramar</div>
+    <div class="dist"><span class="big">1.3 mi</span> to Terramar · <span class="big">2.5 mi</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,750</b> a month · K-8 zone: Terramar</div>
+    
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
       <button class="btn hide" type="button">Hide</button>
@@ -101,14 +104,16 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     <div class="links"><a href="https://www.zillow.com/homes/6617-W-Molly-Ln-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6617%20W%20Molly%20Ln%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
   </div>
 </article>
-<article class="card" data-id="6330 W Big Oak St">
+<article class="card g1" data-id="27242389" data-bd="4">
+  <div class="ban ok">🚌 Bus to both schools</div>
   <a class="photo" href="https://www.redfin.com/AZ/Phoenix/6330-W-Big-Oak-St-85083/home/27242389" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/011/genIslnoResize.7090011_0.webp" alt="6330 W Big Oak St" loading="lazy"><span class="more">See all photos</span></a>
   <div class="body">
-    <div class="row1"><div class="price">$489,995</div><span class="pill ok">🚌 Bus for both schools</span></div>
+    <div class="row1"><div class="price">$489,995</div></div>
     <div class="addr">6330 W Big Oak St<span class="city">Phoenix, AZ 85083</span></div>
     <div class="stats"><span><b>4</b> bd</span><span><b>2.5</b> ba</span><span><b>2,150</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,773</b> a month</div>
-    <div class="dist">1.8 mi to Terramar · 3.0 mi to Mountain Ridge · K-8: Terramar</div>
+    <div class="dist"><span class="big">1.8 mi</span> to Terramar · <span class="big">3.0 mi</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,773</b> a month · K-8 zone: Terramar</div>
+    
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
       <button class="btn hide" type="button">Hide</button>
@@ -117,14 +122,16 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     <div class="links"><a href="https://www.zillow.com/homes/6330-W-Big-Oak-St-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6330%20W%20Big%20Oak%20St%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
   </div>
 </article>
-<article class="card" data-id="6757 W Tether Trl">
-  <a class="photo" href="https://www.redfin.com/AZ/Peoria/6757-W-Tether-Trl-85383/home/27992981" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/824/genIslnoResize.7067824_1.webp" alt="6757 W Tether Trl" loading="lazy"><span class="more">See all photos</span></a>
+<article class="card g1" data-id="27992981" data-bd="5">
+  <div class="ban ok">🚶 Walk to Terramar · 🚌 Bus to Mountain Ridge</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Peoria/6757-W-Tether-Trl-85383/home/27992981" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/824/genIslnoResize.7067824_0.webp" alt="6757 W Tether Trl" loading="lazy"><span class="more">See all photos</span></a>
   <div class="body">
-    <div class="row1"><div class="price">$498,777</div><span class="pill ok">🚌 Bus for both schools</span></div>
+    <div class="row1"><div class="price">$498,777</div></div>
     <div class="addr">6757 W Tether Trl<span class="city">Peoria, AZ 85383</span></div>
     <div class="stats"><span><b>5</b> bd</span><span><b>3</b> ba</span><span><b>2,556</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,821</b> a month</div>
-    <div class="dist">0.9 mi to Terramar · 2.3 mi to Mountain Ridge · K-8: Terramar</div>
+    <div class="dist"><span class="big">1.0 mi</span> to Terramar · <span class="big">2.2 mi</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,821</b> a month · K-8 zone: Terramar</div>
+    
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
       <button class="btn hide" type="button">Hide</button>
@@ -133,14 +140,16 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     <div class="links"><a href="https://www.zillow.com/homes/6757-W-Tether-Trl-Peoria-AZ-85383_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6757%20W%20Tether%20Trl%2C%20Peoria%2C%20AZ%2085383" target="_blank" rel="noopener">Directions</a></div>
   </div>
 </article>
-<article class="card" data-id="27317 N 63rd Dr">
+<article class="card g1" data-id="28421872" data-bd="4">
+  <div class="ban ok">🚌 Bus to both schools</div>
   <a class="photo" href="https://www.redfin.com/AZ/Phoenix/27317-N-63rd-Dr-85083/home/28421872" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/001/genIslnoResize.6955001_0.webp" alt="27317 N 63rd Dr" loading="lazy"><span class="more">See all photos</span></a>
   <div class="body">
-    <div class="row1"><div class="price">$499,990</div><span class="pill ok">🚌 Bus for both schools</span></div>
+    <div class="row1"><div class="price">$499,990</div></div>
     <div class="addr">27317 N 63rd Dr<span class="city">Phoenix, AZ 85083</span></div>
     <div class="stats"><span><b>4</b> bd</span><span><b>2.5</b> ba</span><span><b>2,230</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,827</b> a month</div>
-    <div class="dist">1.8 mi to Terramar · 3.0 mi to Mountain Ridge · K-8: Terramar</div>
+    <div class="dist"><span class="big">1.9 mi</span> to Terramar · <span class="big">3.0 mi</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,827</b> a month · K-8 zone: Terramar</div>
+    
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
       <button class="btn hide" type="button">Hide</button>
@@ -148,180 +157,17 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     </div>
     <div class="links"><a href="https://www.zillow.com/homes/27317-N-63rd-Dr-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=27317%20N%2063rd%20Dr%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
   </div>
-</article></div>
-
-<h2 class="sec">🚗 Mountain Ridge zone, drive to Terramar</h2>
-<p class="h2sub">14 homes. The kids can stay at Terramar, but there is no bus from these homes. You would drive them.</p>
-<div class="grid">
-<article class="card" data-id="6384 W Pontiac Dr">
-  <a class="photo" href="https://www.redfin.com/AZ/Glendale/6384-W-Pontiac-Dr-85308/home/28055242" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/617/genIslnoResize.7040617_3.webp" alt="6384 W Pontiac Dr" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$400,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">6384 W Pontiac Dr<span class="city">Glendale, AZ 85308</span></div>
-    <div class="stats"><span><b>2</b> bd</span><span><b>2</b> ba</span><span><b>1,321</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,285</b> a month</div>
-    <div class="dist">3.0 mi to Terramar · 1.5 mi to Mountain Ridge · K-8: Legend Springs</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%206384%20W%20Pontiac%20Dr%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/6384-W-Pontiac-Dr-Glendale-AZ-85308_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6384%20W%20Pontiac%20Dr%2C%20Glendale%2C%20AZ%2085308" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="7454 W Louise Dr">
-  <a class="photo" href="https://www.redfin.com/AZ/Glendale/7454-W-Louise-Dr-85310/home/27718364" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/462/genIslnoResize.7086462_0.webp" alt="7454 W Louise Dr" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$429,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">7454 W Louise Dr<span class="city">Glendale, AZ 85310</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2</b> ba</span><span><b>1,234</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,442</b> a month</div>
-    <div class="dist">1.9 mi to Terramar · 1.0 mi to Mountain Ridge · K-8: Copper Creek</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%207454%20W%20Louise%20Dr%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/7454-W-Louise-Dr-Glendale-AZ-85310_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=7454%20W%20Louise%20Dr%2C%20Glendale%2C%20AZ%2085310" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="6910 W Via Del Sol Dr">
-  <a class="photo" href="https://www.redfin.com/AZ/Glendale/6910-W-Via-del-Sol-Dr-85310/home/27488738" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/214/genIslnoResize.7073214_0.webp" alt="6910 W Via Del Sol Dr" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$429,900</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">6910 W Via Del Sol Dr<span class="city">Glendale, AZ 85310</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2</b> ba</span><span><b>1,234</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,447</b> a month</div>
-    <div class="dist">2.0 mi to Terramar · 0.7 mi to Mountain Ridge · K-8: Copper Creek</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%206910%20W%20Via%20Del%20Sol%20Dr%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/6910-W-Via-Del-Sol-Dr-Glendale-AZ-85310_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6910%20W%20Via%20Del%20Sol%20Dr%2C%20Glendale%2C%20AZ%2085310" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="6458 W Saddlehorn Rd">
-  <a class="photo" href="https://www.redfin.com/AZ/Phoenix/6458-W-Saddlehorn-Rd-85083/home/28097684" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/940/genIslnoResize.7046940_8.webp" alt="6458 W Saddlehorn Rd" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$433,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">6458 W Saddlehorn Rd<span class="city">Phoenix, AZ 85083</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2</b> ba</span><span><b>1,656</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,464</b> a month</div>
-    <div class="dist">0.8 mi to Terramar · 1.7 mi to Mountain Ridge · K-8: Las Brisas</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%206458%20W%20Saddlehorn%20Rd%2C%20Phoenix.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/6458-W-Saddlehorn-Rd-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6458%20W%20Saddlehorn%20Rd%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="30153 N 71st Dr">
-  <a class="photo" href="https://www.redfin.com/AZ/Peoria/30153-N-71st-Dr-85383/home/28384364" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/758/genIslnoResize.7028758_0.webp" alt="30153 N 71st Dr" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$449,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">30153 N 71st Dr<span class="city">Peoria, AZ 85383</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2.5</b> ba</span><span><b>1,885</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,551</b> a month</div>
-    <div class="dist">3.3 mi to Terramar · 4.7 mi to Mountain Ridge · K-8: Copper Creek</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%2030153%20N%2071st%20Dr%2C%20Peoria.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/30153-N-71st-Dr-Peoria-AZ-85383_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=30153%20N%2071st%20Dr%2C%20Peoria%2C%20AZ%2085383" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="30567 N 73rd Ave">
-  <a class="photo" href="https://www.redfin.com/AZ/Peoria/30567-N-73rd-Ave-85383/home/28417588" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/964/genIslnoResize.7086964_C.webp" alt="30567 N 73rd Ave" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$450,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">30567 N 73rd Ave<span class="city">Peoria, AZ 85383</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2.5</b> ba</span><span><b>1,566</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,556</b> a month</div>
-    <div class="dist">3.4 mi to Terramar · 4.9 mi to Mountain Ridge · K-8: Copper Creek</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%2030567%20N%2073rd%20Ave%2C%20Peoria.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/30567-N-73rd-Ave-Peoria-AZ-85383_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=30567%20N%2073rd%20Ave%2C%20Peoria%2C%20AZ%2085383" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="7037 W Pontiac Dr">
-  <a class="photo" href="https://www.redfin.com/AZ/Glendale/7037-W-Pontiac-Dr-85308/home/28032802" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/935/genIslnoResize.7068935_1.webp" alt="7037 W Pontiac Dr" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$458,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">7037 W Pontiac Dr<span class="city">Glendale, AZ 85308</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2</b> ba</span><span><b>1,838</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,600</b> a month</div>
-    <div class="dist">2.9 mi to Terramar · 1.6 mi to Mountain Ridge · K-8: Sierra Verde</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%207037%20W%20Pontiac%20Dr%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/7037-W-Pontiac-Dr-Glendale-AZ-85308_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=7037%20W%20Pontiac%20Dr%2C%20Glendale%2C%20AZ%2085308" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="21917 N 70th Ave">
-  <a class="photo" href="https://www.redfin.com/AZ/Glendale/21917-N-70th-Ave-85310/home/28180611" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/117/genIslnoResize.7045117_3.webp" alt="21917 N 70th Ave" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$464,900</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">21917 N 70th Ave<span class="city">Glendale, AZ 85310</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2.5</b> ba</span><span><b>1,647</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,637</b> a month</div>
-    <div class="dist">1.9 mi to Terramar · 0.7 mi to Mountain Ridge · K-8: Copper Creek</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%2021917%20N%2070th%20Ave%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/21917-N-70th-Ave-Glendale-AZ-85310_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=21917%20N%2070th%20Ave%2C%20Glendale%2C%20AZ%2085310" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="29376 N 68th Ave">
-  <a class="photo" href="https://www.redfin.com/AZ/Peoria/29376-N-68th-Ave-85383/home/28153350" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/405/genIslnoResize.7075405_7.webp" alt="29376 N 68th Ave" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$469,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">29376 N 68th Ave<span class="city">Peoria, AZ 85383</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2</b> ba</span><span><b>1,636</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,659</b> a month</div>
-    <div class="dist">2.8 mi to Terramar · 4.1 mi to Mountain Ridge · K-8: Copper Creek</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%2029376%20N%2068th%20Ave%2C%20Peoria.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/29376-N-68th-Ave-Peoria-AZ-85383_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=29376%20N%2068th%20Ave%2C%20Peoria%2C%20AZ%2085383" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="8364 W Molly Ln">
-  <a class="photo" href="https://www.redfin.com/AZ/Peoria/8364-W-Molly-Ln-85383/home/27946651" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/901/genIslnoResize.7080901_5.webp" alt="8364 W Molly Ln" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$462,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">8364 W Molly Ln<span class="city">Peoria, AZ 85383</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2</b> ba</span><span><b>1,907</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,621</b> a month</div>
-    <div class="dist">2.0 mi to Terramar · 3.3 mi to Mountain Ridge · K-8: West Wing</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%208364%20W%20Molly%20Ln%2C%20Peoria.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/8364-W-Molly-Ln-Peoria-AZ-85383_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=8364%20W%20Molly%20Ln%2C%20Peoria%2C%20AZ%2085383" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="26413 N 65th Dr">
+</article></div></section>
+<section data-sec="2" hidden><p class="gdesc">The kids keep both schools. The big kids ride the bus to Mountain Ridge. Someone drives the little ones to Terramar every morning and afternoon. The drive is shown big on each home.</p><div class="grid"><article class="card g2" data-id="27910793" data-bd="4">
+  <div class="ban drive">🚌 Bus to Mountain Ridge · 🚗 You drive to Terramar</div>
   <a class="photo" href="https://www.redfin.com/AZ/Phoenix/26413-N-65th-Dr-85083/home/27910793" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/474/genIslnoResize.7080474_0.webp" alt="26413 N 65th Dr" loading="lazy"><span class="more">See all photos</span></a>
   <div class="body">
-    <div class="row1"><div class="price">$479,900</div><span class="pill drive">🚗 Drive to Terramar</span></div>
+    <div class="row1"><div class="price">$479,900</div></div>
     <div class="addr">26413 N 65th Dr<span class="city">Phoenix, AZ 85083</span></div>
     <div class="stats"><span><b>4</b> bd</span><span><b>2.5</b> ba</span><span><b>2,274</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,718</b> a month</div>
-    <div class="dist" style="color:var(--drive);font-weight:700">Seller is not taking offers until November 10</div>
-    <div class="dist">1.1 mi to Terramar · 2.3 mi to Mountain Ridge · K-8: Las Brisas</div>
+    <div class="dist"><span class="big">1.2 mi · about 3 min</span> drive to Terramar</div>
+    <div class="pay">Year 1 payment about <b>$2,718</b> a month · K-8 zone: Las Brisas</div>
+    <div class="note-line">Seller is not taking FHA offers until November 10 (flip rule).</div>
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
       <button class="btn hide" type="button">Hide</button>
@@ -330,30 +176,16 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     <div class="links"><a href="https://www.zillow.com/homes/26413-N-65th-Dr-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=26413%20N%2065th%20Dr%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
   </div>
 </article>
-<article class="card" data-id="6536 W Desert Hollow Dr">
-  <a class="photo" href="https://www.redfin.com/AZ/Phoenix/6536-W-Desert-Hollow-Dr-85083/home/28026425" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/680/genIslnoResize.7046680_0.webp" alt="6536 W Desert Hollow Dr" loading="lazy"><span class="more">See all photos</span></a>
+<article class="card g2" data-id="27037368" data-bd="4">
+  <div class="ban drive">🚌 Bus to Mountain Ridge · 🚗 You drive to Terramar</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Phoenix/6406-W-Tether-Trl-85083/home/27037368" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/060/genIslnoResize.7070060_0.webp" alt="6406 W Tether Trl" loading="lazy"><span class="more">See all photos</span></a>
   <div class="body">
-    <div class="row1"><div class="price">$489,900</div><span class="pill drive">🚗 Drive to Terramar</span></div>
-    <div class="addr">6536 W Desert Hollow Dr<span class="city">Phoenix, AZ 85083</span></div>
-    <div class="stats"><span><b>3</b> bd</span><span><b>2</b> ba</span><span><b>1,571</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,773</b> a month</div>
-    <div class="dist">0.7 mi to Terramar · 1.6 mi to Mountain Ridge · K-8: Las Brisas</div>
-    <div class="acts">
-      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
-      <button class="btn hide" type="button">Hide</button>
-      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%206536%20W%20Desert%20Hollow%20Dr%2C%20Phoenix.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
-    </div>
-    <div class="links"><a href="https://www.zillow.com/homes/6536-W-Desert-Hollow-Dr-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6536%20W%20Desert%20Hollow%20Dr%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
-  </div>
-</article>
-<article class="card" data-id="6406 W Tether Trl">
-  <a class="photo" href="https://www.redfin.com/AZ/Phoenix/6406-W-Tether-Trl-85083/home/27037368" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/060/genIslnoResize.7070060_1.webp" alt="6406 W Tether Trl" loading="lazy"><span class="more">See all photos</span></a>
-  <div class="body">
-    <div class="row1"><div class="price">$485,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
+    <div class="row1"><div class="price">$485,000</div></div>
     <div class="addr">6406 W Tether Trl<span class="city">Phoenix, AZ 85083</span></div>
     <div class="stats"><span><b>4</b> bd</span><span><b>2</b> ba</span><span><b>1,784</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,746</b> a month</div>
-    <div class="dist">1.2 mi to Terramar · 2.3 mi to Mountain Ridge · K-8: Las Brisas</div>
+    <div class="dist"><span class="big">1.2 mi · about 3 min</span> drive to Terramar</div>
+    <div class="pay">Year 1 payment about <b>$2,746</b> a month · K-8 zone: Las Brisas</div>
+    
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
       <button class="btn hide" type="button">Hide</button>
@@ -362,14 +194,16 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     <div class="links"><a href="https://www.zillow.com/homes/6406-W-Tether-Trl-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6406%20W%20Tether%20Trl%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
   </div>
 </article>
-<article class="card" data-id="7193 W Mohawk Ln">
-  <a class="photo" href="https://www.redfin.com/AZ/Glendale/7193-W-Mohawk-Ln-85308/home/28085785" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/098/genIslnoResize.7068098_4.webp" alt="7193 W Mohawk Ln" loading="lazy"><span class="more">See all photos</span></a>
+<article class="card g2" data-id="28085785" data-bd="4">
+  <div class="ban drive">🚌 Bus to Mountain Ridge · 🚗 You drive to Terramar</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Glendale/7193-W-Mohawk-Ln-85308/home/28085785" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/098/genIslnoResize.7068098_0.webp" alt="7193 W Mohawk Ln" loading="lazy"><span class="more">See all photos</span></a>
   <div class="body">
-    <div class="row1"><div class="price">$500,000</div><span class="pill drive">🚗 Drive to Terramar</span></div>
+    <div class="row1"><div class="price">$500,000</div></div>
     <div class="addr">7193 W Mohawk Ln<span class="city">Glendale, AZ 85308</span></div>
     <div class="stats"><span><b>4</b> bd</span><span><b>3</b> ba</span><span><b>2,146</b> sq ft</span></div>
-    <div class="pay">Year 1 payment about <b>$2,827</b> a month</div>
-    <div class="dist">2.7 mi to Terramar · 1.5 mi to Mountain Ridge · K-8: Sierra Verde</div>
+    <div class="dist"><span class="big">2.7 mi · about 7 min</span> drive to Terramar</div>
+    <div class="pay">Year 1 payment about <b>$2,827</b> a month · K-8 zone: Sierra Verde</div>
+    
     <div class="acts">
       <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
       <button class="btn hide" type="button">Hide</button>
@@ -377,36 +211,230 @@ h2{font-family:var(--display);font-size:1.15rem;margin:26px 0 4px}
     </div>
     <div class="links"><a href="https://www.zillow.com/homes/7193-W-Mohawk-Ln-Glendale-AZ-85308_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=7193%20W%20Mohawk%20Ln%2C%20Glendale%2C%20AZ%2085308" target="_blank" rel="noopener">Directions</a></div>
   </div>
-</article></div>
+</article></div></section>
+<section data-sec="3" hidden><p class="gdesc">No school bus from these homes. Someone drives all the kids to both schools every day. Keeping the kids at Terramar and Mountain Ridge from here would need the district's approval. Look at the drive times first.</p><div class="grid"><article class="card g3" data-id="28124649" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Glendale/6503-W-Adobe-Dr-85308/home/28124649" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/965/genIslnoResize.7066965_0.webp" alt="6503 W Adobe Dr" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$425,000</div></div>
+    <div class="addr">6503 W Adobe Dr<span class="city">Glendale, AZ 85308</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>2</b> ba</span><span><b>1,667</b> sq ft</span></div>
+    <div class="dist"><span class="big">3.3 mi · about 8 min</span> to Terramar<br><span class="big">1.8 mi · about 5 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,421</b> a month · K-8 zone: Highland Lakes</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%206503%20W%20Adobe%20Dr%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/6503-W-Adobe-Dr-Glendale-AZ-85308_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=6503%20W%20Adobe%20Dr%2C%20Glendale%2C%20AZ%2085308" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="27291093" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Peoria/9359-W-Deanna-Dr-85382/home/27291093" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/161/genIslnoResize.7067161_0.webp" alt="9359 W Deanna Dr" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$449,000</div></div>
+    <div class="addr">9359 W Deanna Dr<span class="city">Peoria, AZ 85382</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>2.5</b> ba</span><span><b>2,126</b> sq ft</span></div>
+    <div class="dist"><span class="big">3.8 mi · about 10 min</span> to Terramar<br><span class="big">3.5 mi · about 9 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,551</b> a month · K-8 zone: outside Deer Valley</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%209359%20W%20Deanna%20Dr%2C%20Peoria.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/9359-W-Deanna-Dr-Peoria-AZ-85382_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=9359%20W%20Deanna%20Dr%2C%20Peoria%2C%20AZ%2085382" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="28413245" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Phoenix/26007-N-53rd-Dr-85083/home/28413245" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/872/genIslnoResize.7036872_0.webp" alt="26007 N 53 Dr" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$450,000</div></div>
+    <div class="addr">26007 N 53 Dr<span class="city">Phoenix, AZ 85083</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>2.5</b> ba</span><span><b>2,297</b> sq ft</span></div>
+    <div class="dist"><span class="big">2.2 mi · about 6 min</span> to Terramar<br><span class="big">2.6 mi · about 7 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,556</b> a month · K-8 zone: Inspiration Mountain</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%2026007%20N%2053%20Dr%2C%20Phoenix.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/26007-N-53-Dr-Phoenix-AZ-85083_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=26007%20N%2053%20Dr%2C%20Phoenix%2C%20AZ%2085083" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="27584893" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Glendale/3926-W-Mariposa-Grande-85310/home/27584893" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/606/genIslnoResize.7076606_0.webp" alt="3926 W Mariposa Grande Ln" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$450,000</div></div>
+    <div class="addr">3926 W Mariposa Grande Ln<span class="city">Glendale, AZ 85310</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>2.5</b> ba</span><span><b>1,669</b> sq ft</span></div>
+    <div class="dist"><span class="big">3.9 mi · about 10 min</span> to Terramar<br><span class="big">3.5 mi · about 9 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,556</b> a month · K-8 zone: Desert Sage</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%203926%20W%20Mariposa%20Grande%20Ln%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/3926-W-Mariposa-Grande-Ln-Glendale-AZ-85310_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=3926%20W%20Mariposa%20Grande%20Ln%2C%20Glendale%2C%20AZ%2085310" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="27228172" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Glendale/18670-N-67th-Dr-85308/home/27228172" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/754/genIslnoResize.7054754_0.webp" alt="18670 N 67th Dr" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$450,000</div></div>
+    <div class="addr">18670 N 67th Dr<span class="city">Glendale, AZ 85308</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>2.5</b> ba</span><span><b>2,346</b> sq ft</span></div>
+    <div class="dist"><span class="big">4.0 mi · about 10 min</span> to Terramar<br><span class="big">2.5 mi · about 7 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,556</b> a month · K-8 zone: Arrowhead</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%2018670%20N%2067th%20Dr%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/18670-N-67th-Dr-Glendale-AZ-85308_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=18670%20N%2067th%20Dr%2C%20Glendale%2C%20AZ%2085308" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="27088609" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Peoria/9247-W-Salter-Dr-85382/home/27088609" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/636/genIslnoResize.7086636_0.webp" alt="9247 W Salter Dr" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$469,000</div></div>
+    <div class="addr">9247 W Salter Dr<span class="city">Peoria, AZ 85382</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>2</b> ba</span><span><b>2,166</b> sq ft</span></div>
+    <div class="dist"><span class="big">3.5 mi · about 9 min</span> to Terramar<br><span class="big">3.4 mi · about 9 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,659</b> a month · K-8 zone: outside Deer Valley</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%209247%20W%20Salter%20Dr%2C%20Peoria.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/9247-W-Salter-Dr-Peoria-AZ-85382_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=9247%20W%20Salter%20Dr%2C%20Peoria%2C%20AZ%2085382" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="27935309" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Glendale/23802-N-39th-Ln-85310/home/27935309" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/850/genIslnoResize.7089850_0.webp" alt="23802 N 39th Ln" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$480,000</div></div>
+    <div class="addr">23802 N 39th Ln<span class="city">Glendale, AZ 85310</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>2</b> ba</span><span><b>2,290</b> sq ft</span></div>
+    <div class="dist"><span class="big">4.0 mi · about 10 min</span> to Terramar<br><span class="big">3.5 mi · about 9 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,719</b> a month · K-8 zone: Desert Sage</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%2023802%20N%2039th%20Ln%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/23802-N-39th-Ln-Glendale-AZ-85310_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=23802%20N%2039th%20Ln%2C%20Glendale%2C%20AZ%2085310" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="28165864" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Glendale/4132-W-Whispering-Wind-Dr-85310/home/28165864" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/002/genIslnoResize.7048002_0.webp" alt="4132 W Whispering Wind Dr" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$484,900</div></div>
+    <div class="addr">4132 W Whispering Wind Dr<span class="city">Glendale, AZ 85310</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>2</b> ba</span><span><b>1,806</b> sq ft</span></div>
+    <div class="dist"><span class="big">3.5 mi · about 9 min</span> to Terramar<br><span class="big">3.3 mi · about 9 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,746</b> a month · K-8 zone: Desert Sage</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%204132%20W%20Whispering%20Wind%20Dr%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/4132-W-Whispering-Wind-Dr-Glendale-AZ-85310_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=4132%20W%20Whispering%20Wind%20Dr%2C%20Glendale%2C%20AZ%2085310" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="27830462" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Glendale/4229-W-Camino-Vivaz-85310/home/27830462" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/681/genIslnoResize.7050681_0.webp" alt="4229 W Camino Vivaz St" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$485,000</div></div>
+    <div class="addr">4229 W Camino Vivaz St<span class="city">Glendale, AZ 85310</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>3</b> ba</span><span><b>2,089</b> sq ft</span></div>
+    <div class="dist"><span class="big">3.6 mi · about 9 min</span> to Terramar<br><span class="big">3.1 mi · about 8 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,746</b> a month · K-8 zone: Desert Sage</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%204229%20W%20Camino%20Vivaz%20St%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/4229-W-Camino-Vivaz-St-Glendale-AZ-85310_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=4229%20W%20Camino%20Vivaz%20St%2C%20Glendale%2C%20AZ%2085310" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article>
+<article class="card g3" data-id="26957095" data-bd="4">
+  <div class="ban far">🚗 You drive to both schools</div>
+  <a class="photo" href="https://www.redfin.com/AZ/Glendale/4142-W-Electra-Ln-85310/home/26957095" target="_blank" rel="noopener"><img src="https://ssl.cdn-redfin.com/photo/86/islphoto/381/genIslnoResize.7074381_0.webp" alt="4142 W Electra Ln" loading="lazy"><span class="more">See all photos</span></a>
+  <div class="body">
+    <div class="row1"><div class="price">$494,000</div></div>
+    <div class="addr">4142 W Electra Ln<span class="city">Glendale, AZ 85310</span></div>
+    <div class="stats"><span><b>4</b> bd</span><span><b>3</b> ba</span><span><b>1,910</b> sq ft</span></div>
+    <div class="dist"><span class="big">3.7 mi · about 10 min</span> to Terramar<br><span class="big">3.1 mi · about 8 min</span> to Mountain Ridge</div>
+    <div class="pay">Year 1 payment about <b>$2,795</b> a month · K-8 zone: Desert Sage</div>
+    
+    <div class="acts">
+      <button class="btn fav" type="button" aria-pressed="false">♡ Save</button>
+      <button class="btn hide" type="button">Hide</button>
+      <a class="btn show" href="https://wa.me/14802383665?text=Hi%20Danni%2C%20we%20would%20like%20to%20request%20a%20showing%20for%204142%20W%20Electra%20Ln%2C%20Glendale.%20When%20is%20a%20good%20time%3F" target="_blank" rel="noopener">Request showing</a>
+    </div>
+    <div class="links"><a href="https://www.zillow.com/homes/4142-W-Electra-Ln-Glendale-AZ-85310_rb/" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=4142%20W%20Electra%20Ln%2C%20Glendale%2C%20AZ%2085310" target="_blank" rel="noopener">Directions</a></div>
+  </div>
+</article></div></section>
+<section data-sec="fav" hidden><p class="gdesc">Homes you saved.</p><div class="grid" id="favgrid"></div></section>
+<section data-sec="hide" hidden><p class="gdesc">Homes you hid. Tap Unhide to bring one back.</p><div class="grid" id="hidegrid"></div></section>
 
-<p class="note">Payments are estimates at the asking price using the same setup as your pre-approval: FHA, 3.5% down, 6.875% rate with a seller paid 3-2-1 buydown, showing year 1 at 3.875%. Includes principal, interest, property tax estimate, homeowners insurance and FHA mortgage insurance. HOA dues are not included. Bus eligibility is confirmed with the district before an offer. Listings change daily.</p>
+<p class="note">Payments are estimates at the asking price using the same setup as your pre-approval: FHA, 3.5% down, 6.875% rate with a seller paid 3-2-1 buydown, showing year 1 at 3.875%. Includes principal, interest, property tax estimate, homeowners insurance and FHA mortgage insurance. HOA dues are not included. Drive times are estimates. Bus eligibility is confirmed with the district before an offer. This page updates every morning.</p>
 </div>
-
 <script>
 (function(){
-let st={fav:[],hide:[]};
-try{st=Object.assign(st,JSON.parse(localStorage.getItem('homes')||'{}'))}catch(e){}
-const fav=new Set(st.fav), hide=new Set(st.hide); let filter='all';
-const cards=[...document.querySelectorAll('.card')];
-function save(){try{localStorage.setItem('homes',JSON.stringify({fav:[...fav],hide:[...hide]}))}catch(e){}}
+const IDS=["26957095", "27037368", "27088609", "27142013", "27228172", "27242389", "27291093", "27584893", "27830462", "27859420", "27910793", "27935309", "27992981", "28085785", "28124649", "28165864", "28413245", "28421872"];
+let st={fav:[],hide:[],seen:[]};
+try{st=Object.assign(st,JSON.parse(localStorage.getItem('homes2')||'{}'))}catch(e){}
+const fav=new Set(st.fav), hide=new Set(st.hide), seen=new Set(st.seen);
+const cards=[...document.querySelectorAll('.card')]; const home={}; cards.forEach(c=>home[c.dataset.id]=c.parentElement);
+let view='1';
+function save(){try{localStorage.setItem('homes2',JSON.stringify({fav:[...fav],hide:[...hide],seen:[...seen]}))}catch(e){}}
+// new since last visit
+const fresh=seen.size? IDS.filter(id=>!seen.has(id)) : [];
+if(fresh.length){const nb=document.getElementById('newbar'); nb.textContent=fresh.length+(fresh.length===1?' new home':' new homes')+' since you last looked. Look for the red New tag.'; nb.hidden=false;
+  cards.forEach(c=>{if(fresh.includes(c.dataset.id)&&!c.querySelector('.new')){const s=document.createElement('span');s.className='new';s.textContent='New';c.querySelector('.row1').appendChild(s)}})}
+IDS.forEach(id=>seen.add(id)); save();
 function render(){
-  cards.forEach(c=>{const id=c.dataset.id, f=fav.has(id), h=hide.has(id);
+  cards.forEach(c=>{const id=c.dataset.id,f=fav.has(id),h=hide.has(id);
     c.classList.toggle('fav',f);
     const fb=c.querySelector('.fav'); fb.textContent=f?'♥ Saved':'♡ Save'; fb.setAttribute('aria-pressed',f);
-    const hb=c.querySelector('.hide'); hb.textContent=h?'Unhide':'Hide';
-    const bd=parseInt(c.querySelector('.stats b').textContent)||0;
-    const vis= filter==='all'? !h : filter==='fav'? f && !h : filter==='bd4'? bd>=4 && !h : h;
-    c.classList.toggle('hidden',!vis);
+    c.querySelector('.hide').textContent=h?'Unhide':'Hide';
+    // put card in the right grid
+    let target;
+    if(view==='fav') target= f&&!h ? document.getElementById('favgrid') : null;
+    else if(view==='hide') target= h ? document.getElementById('hidegrid') : null;
+    else target= (!h && c.classList.contains('g'+view)) ? home[id] : null;
+    if(target){ if(c.parentElement!==target) target.appendChild(c); c.hidden=false; } else { if(c.parentElement!==home[id]) home[id].appendChild(c); c.hidden=true; }
   });
-  document.querySelectorAll('.sec').forEach(h=>{const g=h.nextElementSibling.nextElementSibling; const any=[...g.children].some(c=>!c.classList.contains('hidden')); h.hidden=!any; h.nextElementSibling.hidden=!any; g.hidden=!any;});
-  document.getElementById('nAll').textContent=cards.length-hide.size; document.getElementById('nFav').textContent=[...fav].filter(x=>!hide.has(x)).length; document.getElementById('nHide').textContent=hide.size; document.getElementById('nBd4').textContent=cards.filter(c=>(parseInt(c.querySelector('.stats b').textContent)||0)>=4 && !hide.has(c.dataset.id)).length;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.f===filter));
+  document.querySelectorAll('section[data-sec]').forEach(s=>s.hidden=s.dataset.sec!==view);
+  document.querySelectorAll('.gbtn').forEach(b=>b.classList.toggle('on',b.dataset.g===view));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.f===view));
+  for(const g of ['1','2','3']) document.getElementById('n'+g).textContent=cards.filter(c=>c.classList.contains('g'+g)&&!hide.has(c.dataset.id)).length;
+  document.getElementById('nFav').textContent=[...fav].filter(x=>!hide.has(x)).length; document.getElementById('nHide').textContent=hide.size;
 }
 cards.forEach(c=>{const id=c.dataset.id;
   c.querySelector('.fav').addEventListener('click',()=>{fav.has(id)?fav.delete(id):fav.add(id);save();render()});
   c.querySelector('.hide').addEventListener('click',()=>{hide.has(id)?hide.delete(id):hide.add(id);save();render()});
 });
-document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{filter=t.dataset.f;render()}));
+document.querySelectorAll('.gbtn').forEach(b=>b.addEventListener('click',()=>{view=b.dataset.g;render();}));
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{view=(view===t.dataset.f)?'1':t.dataset.f;render();}));
 render();
 })();
 </script>
