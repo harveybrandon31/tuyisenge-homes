@@ -96,6 +96,7 @@ def pull():
                 price = x['price']['value']
                 if price > MAX_PRICE: continue
                 if x.get('skPoolType') in POOL_CODES: continue
+                if x.get('propertyType') != 6: continue   # single family only (13 = townhouse)
                 ll = x['latLong']['value']; p = (ll['latitude'], ll['longitude'])
                 dT = hav(p, TERRAMAR)
                 if dT > RADIUS_MI: continue
