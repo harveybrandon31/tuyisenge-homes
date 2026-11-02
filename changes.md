@@ -1,5 +1,5 @@
-# Changes November 1, 2026
+# Changes November 2, 2026
 
-19 homes fit the rule: 6 bus to both, 4 bus to Mountain Ridge only, 9 drive to both.
+20 homes fit the rule: 6 bus to both, 4 bus to Mountain Ridge only, 10 drive to both.
 
-ADDED  9239 W Salter Dr, Peoria  $450,000  4 bd  (drive to both, 3.5 mi to Terramar)
+ADDED  9434 W Ross Ave, Peoria  $499,900  4 bd  (drive to both, 3.8 mi to Terramar)
