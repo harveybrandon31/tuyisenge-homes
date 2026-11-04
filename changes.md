@@ -1,6 +1,8 @@
-# Changes November 3, 2026
+# Changes November 4, 2026
 
-20 homes fit the rule: 6 bus to both, 4 bus to Mountain Ridge only, 10 drive to both.
+18 homes fit the rule: 4 bus to both, 5 bus to Mountain Ridge only, 9 drive to both.
 
-PRICE  6510 W Chisum Trl  $470,000 -> $465,000
-PRICE  9239 W Salter Dr  $450,000 -> $449,000
+ADDED  7320 W Montgomery Rd, Peoria  $480,000  4 bd  (bus to Mountain Ridge, drive to Terramar, 3.5 mi to Terramar)
+GONE   6774 W Rowel Rd, Peoria  $469,900  (sold, pending or withdrawn)
+GONE   6757 W Tether Trl, Peoria  $459,777  (sold, pending or withdrawn)
+GONE   19505 N 61st Dr, Glendale  $460,000  (sold, pending or withdrawn)
