@@ -1,5 +1,5 @@
-# Changes November 6, 2026
+# Changes November 7, 2026
 
-18 homes fit the rule: 4 bus to both, 5 bus to Mountain Ridge only, 9 drive to both.
+19 homes fit the rule: 4 bus to both, 6 bus to Mountain Ridge only, 9 drive to both.
 
-PRICE  6503 W Adobe Dr  $417,500 -> $410,000
+ADDED  6520 W Range Mule Dr, Phoenix  $499,000  5 bd  (bus to Mountain Ridge, drive to Terramar, 0.8 mi to Terramar)
