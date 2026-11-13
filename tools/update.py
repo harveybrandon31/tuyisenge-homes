@@ -88,7 +88,7 @@ def gis(params):
 def pull():
     homes = {}
     for z, rid in ZIPS.items():
-        for x in gis({'al': 1, 'market': 'phoenix', 'num_homes': 350, 'ord': 'redfin-recommended-asc', 'page_number': 1,
+        for x in gis({'al': 1, 'market': 'phoenix', 'num_homes': 2000, 'ord': 'redfin-recommended-asc', 'page_number': 1,
                       'region_id': rid, 'region_type': 2, 'sf': '1,2,3,5,6,7', 'status': 9, 'uipt': 1, 'v': 8}):
             try:
                 if x.get('mlsStatus') != 'Active': continue

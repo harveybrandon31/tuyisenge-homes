@@ -1,6 +1,7 @@
 # Changes November 13, 2026
 
-18 homes fit the rule: 4 bus to both, 7 bus to Mountain Ridge only, 7 drive to both.
+21 homes fit the rule: 7 bus to both, 7 bus to Mountain Ridge only, 7 drive to both.
 
-ADDED  22031 N 73rd Ave, Glendale  $485,000  4 bd  (bus to Mountain Ridge, drive to Terramar, 1.9 mi to Terramar)
-PRICE  6635 W EL Cortez Pl  $499,000 -> $469,000
+ADDED  6757 W Tether Trl, Peoria  $459,777  5 bd  (bus to both, 1.0 mi to Terramar)
+ADDED  6774 W Rowel Rd, Peoria  $469,900  5 bd  (bus to both, 1.0 mi to Terramar)
+ADDED  25422 N 68th Dr, Peoria  $499,000  4 bd  (bus to both, 0.4 mi to Terramar)
